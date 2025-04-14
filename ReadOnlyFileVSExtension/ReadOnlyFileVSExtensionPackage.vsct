@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <Extern href="stdidcmd.h"/>
+  <Extern href="vsshlids.h"/>
+
+  <Commands package="guidReadOnlyFileVSExtensionPackage">
+    <Groups>
+      <Group guid="guidReadOnlyFileVSExtensionPackageCmdSet" id="MyMenuGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_ITEMNODE"/>
+      </Group>
+    </Groups>
+
+    <Buttons>
+      <Button guid="guidReadOnlyFileVSExtensionPackageCmdSet" id="ToggleReadOnlyCommandId" priority="0x0100" type="Button">
+        <Parent guid="guidReadOnlyFileVSExtensionPackageCmdSet" id="MyMenuGroup" />
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <CommandFlag>TextChanges</CommandFlag>
+        <Strings>
+          <ButtonText>Toggle Read-Only Status</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+  </Commands>
+
+  <Symbols>
+    <GuidSymbol name="guidReadOnlyFileVSExtensionPackage" value="{8495c3b0-e079-473c-b27e-959497ad572a}" />
+    
+    <GuidSymbol name="guidReadOnlyFileVSExtensionPackageCmdSet" value="{7593ab80-e247-452a-8c2d-274be3d5b7df}">
+      <IDSymbol name="MyMenuGroup" value="0x1020" />
+      <IDSymbol name="ToggleReadOnlyCommandId" value="0x0100" />
+    </GuidSymbol>
+
+  </Symbols>
+</CommandTable>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+    <Metadata>
+        <Identity Id="ReadOnlyFileVSExtension.2b85af9e-e814-483f-a4b0-2a3358c9c7f1" Version="1.0.0" Language="en-US" Publisher="ArgCodeTools" />
+        <DisplayName>ReadOnlyFileVSExtension</DisplayName>
+        <Description xml:space="preserve">ReadOnlyFileVSExtension is a Visual Studio 2022 extension that allows developers to easily toggle the edit permissions of files in the Solution Explorer. With a simple right-click, you can mark a file as "Read-Only" or "Writable", streamlining your workflow and enhancing file management. Ideal for projects where file permissions need to be adjusted frequently, this extension provides a quick and intuitive way to manage file states without leaving the development environment.
+        </Description>
+        <Icon>Resources\vsExtension128x128.png</Icon>
+    </Metadata>
+    <Installation>
+        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0, 18.0)">
+            <ProductArchitecture>amd64</ProductArchitecture>
+        </InstallationTarget>
+    </Installation>
+    <Dependencies>
+        <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+    </Dependencies>
+    <Prerequisites>
+        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[17.0,18.0)" DisplayName="Visual Studio core editor" />
+    </Prerequisites>
+    <Assets>
+        <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+    </Assets>
+</PackageManifest>
